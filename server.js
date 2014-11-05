@@ -22,6 +22,10 @@ io.on('connection', function (socket) {
     io.emit('dir', data);
   });
 
+  socket.on('toggle lightsable', function () {
+    io.emit('toggle lightsable');
+  });
+
 });
 
 http.listen(port, function(){
