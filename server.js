@@ -10,20 +10,28 @@ app.get('/', function(req, res){
 
 io.on('connection', function (socket) {
 
-  socket.on('tiltLR', function (data) {
-    io.emit('tiltLR', data);
+  socket.on('join', function (code) {
+    socket.join(code);
   });
 
-  socket.on('tiltFB', function (data) {
-    io.emit('tiltFB', data);
+  socket.on('lightsaber type', function (type) {
+    io.emit('lightsaber type', type);
   });
 
-  socket.on('dir', function (data) {
-    io.emit('dir', data);
+  socket.on('tiltLR', function (tiltLR) {
+    io.emit('tiltLR', tiltLR);
   });
 
-  socket.on('toggle lightsable', function () {
-    io.emit('toggle lightsable');
+  socket.on('tiltFB', function (tiltFB) {
+    io.emit('tiltFB', tiltFB);
+  });
+
+  socket.on('dir', function (dir) {
+    io.emit('dir', dir);
+  });
+
+  socket.on('toggle lightsaber', function () {
+    io.emit('toggle lightsaber');
   });
 
 });
