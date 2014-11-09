@@ -1,0 +1,24 @@
+body {
+  background: black url("../img/background.png");
+}
+
+.lightsaber {
+  -webkit-perspective: 300; perspective: 300;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.box {
+  width:16px;
+  height:310px;
+  margin-left:-8px;
+  margin-top:-155px;
+  position:fixed;
+  top:50%;
+  left:50%;
+}
+
+.waiting{
+  color: #fff;
+}

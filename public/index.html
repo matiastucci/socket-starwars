@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Lightsaber controller</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/lightsabers.css" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <table class="box">
+      <tr>
+        <td>
+          <div class="waiting">waiting...</div>
+          <div id="lightsaber" class="lightsaber"></div>
+        </td>
+      </tr>
+    </table>
+
+    <script id="template" type="x-tmpl-mustache">
+      <label for="{{type}}"></label>
+      <input type="checkbox" id="{{type}}">
+      <div class="switch"></div>
+      <div class="plasma {{type}}"></div>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="js/lib/mustache.js"></script>  
+    <script src="js/script.js"></script>
+
+  </body>
+
+</html>

@@ -1,12 +1,11 @@
-var app   = require('express')();
-var http  = require('http').Server(app);
-var io    = require('socket.io')(http);
+var express = require('express');
+var app     = express();
+var server  = require('http').createServer(app);
+var io      = require('socket.io')(server);
 
 var port  = process.env.PORT || 8080;
 
-app.get('/', function(req, res){
-  res.send('welcome to the socket-move server');
-});
+app.use(express.static(__dirname + '/public'));
 
 io.on('connection', function (socket) {
 
@@ -36,6 +35,6 @@ io.on('connection', function (socket) {
 
 });
 
-http.listen(port, function(){
+server.listen(port, function(){
   console.log('listening on *:'+port);
 });
