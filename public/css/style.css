@@ -19,6 +19,17 @@ body {
   left:50%;
 }
 
-.waiting{
+.code-box{
   color: #fff;
+  text-align: center;
+  z-index: 99;
+  font-size: 20px;
+}
+
+.url{
+  text-decoration: underline;
+}
+
+.code{
+  font-weight: bold;
 }

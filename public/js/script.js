@@ -1,12 +1,10 @@
-//var baseUrl = 'https://socket-transform.herokuapp.com:443';
-// var baseUrl = 'http://10.208.32.148:8080';
-
-// var socket = io.connect(baseUrl);
 var socket = io.connect();
-
 var tiltLR,tiltFB,dir,lightsaberType;
 
 var code = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+socket.emit('join',{code: code});
+
+$('.code').html(code);
 
 function compileNewLightsaber(type){
   var template = $('#template').html();
@@ -31,19 +29,17 @@ function toggleSaber(){
 }
 
 socket.on('lightsaber type', function(type){
-  $('.waiting').hide();
+  $('.code-box').hide();
   lightsaberType = type;
   compileNewLightsaber(type);
 });
 
 socket.on('tiltLR', function(data){
-  // console.log('tiltLR: ' + data);
   tiltLR = data;
   deviceOrientationHandler(tiltLR, tiltFB, dir);
 });
 
 socket.on('tiltFB', function(data){
-  // console.log('tiltFB: ' + data);
   tiltFB = data;
   deviceOrientationHandler(tiltLR, tiltFB, dir);
 });

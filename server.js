@@ -9,28 +9,27 @@ app.use(express.static(__dirname + '/public'));
 
 io.on('connection', function (socket) {
 
-  socket.on('join', function (code) {
-    socket.join(code);
+  var code;
+
+  socket.on('join', function (data) {
+    code = data.code;
+    socket.join(code); // We are using room of socket io
   });
 
   socket.on('lightsaber type', function (type) {
-    io.emit('lightsaber type', type);
+    socket.in(code).emit('lightsaber type', type);
   });
 
   socket.on('tiltLR', function (tiltLR) {
-    io.emit('tiltLR', tiltLR);
+    socket.in(code).emit('tiltLR', tiltLR);
   });
 
   socket.on('tiltFB', function (tiltFB) {
-    io.emit('tiltFB', tiltFB);
-  });
-
-  socket.on('dir', function (dir) {
-    io.emit('dir', dir);
+    socket.in(code).emit('tiltFB', tiltFB);
   });
 
   socket.on('toggle lightsaber', function () {
-    io.emit('toggle lightsaber');
+    socket.in(code).emit('toggle lightsaber');
   });
 
 });
