@@ -7,8 +7,7 @@ angular.module('lightsabers.controllers', [])
   }
 
   $scope.showFirefoxButton = function(){
-    var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-    if(is_firefox){
+    if(Lightsaber.isFirefox()){
       return true;
     }
     return false;
@@ -30,7 +29,7 @@ angular.module('lightsabers.controllers', [])
 
   $scope.data = {};
   $scope.data.type = Lightsaber.getType();
-  
+
   if($stateParams.code){
     $scope.data.code = $stateParams.code;
     Lightsaber.setCode($scope.data.code);

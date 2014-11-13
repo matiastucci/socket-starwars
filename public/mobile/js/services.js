@@ -34,18 +34,21 @@ angular.module('lightsabers.services', [])
     },
     getType: function(){
       return type;
+    },
+    isFirefox: function(){
+      return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     }
   }
 
 })
 
-.factory('DeviceOrientation', function(mySocket) {
+.factory('DeviceOrientation', function(mySocket, Lightsaber) {
 
   return {
     addListener: function() {
       if (window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', function(eventData) {
-            if(!eventData.gamma){
+            if(!eventData.gamma && !Lightsaber.isFirefox()){
               alert('You probably need to update your browser. Or try Firefox.');
             }
             else{
