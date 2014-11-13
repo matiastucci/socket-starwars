@@ -5,8 +5,8 @@ var io      = require('socket.io')(server);
 
 var port  = process.env.PORT || 8080;
 
-app.use(express.static(__dirname + '/public'));
-app.use('/mobile', express.static(__dirname + '/mobilw'));
+app.use(express.static(__dirname + '/public/desktop'));
+app.use('/mobile', express.static(__dirname + '/public/mobile'));
 
 io.on('connection', function (socket) {
 

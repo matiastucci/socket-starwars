@@ -1,7 +1,7 @@
 var socket = io.connect();
 
-var baseUrl = 'https://socket-transform.herokuapp.com:443/mobile/#/tab/config/';
-// var baseUrl = 'http://10.208.32.147:8080/mobile/#/tab/config/';
+// var baseUrl = 'https://socket-transform.herokuapp.com:443/mobile/#/tab/config/';
+var baseUrl = 'http://10.208.32.147:8080/mobile/#/tab/config/';
 
 var tiltLR,tiltFB,dir,lightsaberType,code;
 
@@ -65,5 +65,8 @@ socket.on('tiltFB', function(data){
 
 socket.on('toggle lightsaber', function(){
   var checked = document.getElementById(lightsaberType).checked;
+  if(!checked){
+    document.getElementById('audio').play()
+  }
   document.getElementById(lightsaberType).checked = !checked;
 });
