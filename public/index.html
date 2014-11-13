@@ -6,8 +6,8 @@
 
 		<title>Lightsaber Controller</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Socket.IO Lightsaber Controller">
+		<meta name="author" content="Matias Tucci">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -25,8 +25,6 @@
 	</head>
 
 	<body>
-
-	<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
 
 		<div class="reveal">
 
@@ -46,10 +44,7 @@
 				<section data-state="sync">
 					<div class="sync-text">
 						<h2>Sync</h2>
-						<ol>
-							<li>Enter <a target="_blank" href="http://keepe.rs/projects/socket-starwars">http://keepe.rs/projects/socket-starwars</a> in your mobile browser</li>
-							<li>Enter the code: <span class="code"></span></li>
-						</ol>
+						<div id="qrcode"></div>
 					</div>
 					<table class="box">
 			      <tr>
@@ -60,19 +55,11 @@
 			    </table>
 				</section>
 
-				<!-- <section data-state="controller">
-					<table class="box">
-			      <tr>
-			        <td>
-			          <div id="lightsaber" class="lightsaber"></div>
-			        </td>
-			      </tr>
-			    </table>
-				</section> -->
-
 			</div>
 
 		</div>
+
+		<a class="fork-reveal" style="display: block;" target="_blank" href="https://github.com/matiastucci/socket-transform-server"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork on GitHub"></a>
 
 		<script id="template" type="x-tmpl-mustache">
       <label for="{{type}}"></label>
@@ -85,6 +72,7 @@
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="lib/js/mustache.js"></script>
+		<script src="lib/js/qrcode.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 		<script src="js/script.js"></script>
 

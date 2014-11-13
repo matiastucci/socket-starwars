@@ -1,0 +1,19 @@
+<ion-view title="Controller">
+  <ion-content class="padding">
+
+    <button 
+      class="button button-block button-outline button-dark"
+      ng-if="showFirefoxButton()"
+      ng-click="toggle()">
+        Toggle lightsaber
+    </button>
+
+    <section class="main" ng-if="!showFirefoxButton()">
+      <div class="switch buttonSwitch">
+        <input class="test" ng-click="toggle()" type="checkbox">
+        <label></label>
+      </div>
+    </section>
+
+  </ion-content>
+</ion-view>

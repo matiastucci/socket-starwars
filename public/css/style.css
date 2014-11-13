@@ -12,8 +12,12 @@ body {
   left:50%;
 }
 
-.code{
-  font-weight: bold !important;
+#qrcode{
+  background-color: #000;
+  padding: 40px;
+  width: 190px;
+  height: 190px;
+  display: inline-block;
 }
 
 .lightsaber {

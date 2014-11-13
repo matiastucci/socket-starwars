@@ -1,0 +1,18 @@
+<ion-view title="Choose a type">
+  <ion-content class="padding">
+
+    <div class="list">
+
+      <ion-radio ng-model="data.type" ng-value="'yoda'">Yoda</ion-radio>
+      <ion-radio ng-model="data.type" ng-value="'windu'">Windu</ion-radio>
+      <ion-radio ng-model="data.type" ng-value="'vader'">Dart-Vader</ion-radio>
+      <ion-radio ng-model="data.type" ng-value="'obi-wan'">Obi-Wan</ion-radio>
+
+      <button class="button button-block button-outline button-dark" ng-click="setType(data.type)">
+        Accept
+      </button>
+
+    </div>
+
+  </ion-content>
+</ion-view>

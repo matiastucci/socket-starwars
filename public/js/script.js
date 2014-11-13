@@ -1,10 +1,21 @@
-var socket = io.connect('http://localhost:8080');
-var tiltLR,tiltFB,dir,lightsaberType;
+var socket = io.connect();
+
+var baseUrl = 'https://socket-transform.herokuapp.com:443/mobile/#/tab/config/';
+// var baseUrl = 'http://10.208.32.147:8080/mobile/#/tab/config/';
+
+var tiltLR,tiltFB,dir,lightsaberType,code;
 
 Reveal.addEventListener('sync', function() {
   if(!code){
-    var code = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-    $('.code').html(code);
+    code = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    var qrcode = new QRCode("qrcode", {
+      text: baseUrl+code,
+      width: 190,
+      height: 190,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
     socket.emit('join',{code: code});
   }
   if(lightsaberType){
@@ -20,10 +31,10 @@ function compileNewLightsaber(type){
 }
 
 function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-  var logo = document.getElementById("lightsaber");
-  logo.style.webkitTransform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
-  logo.style.MozTransform = "rotate("+ tiltLR +"deg)";
-  logo.style.transform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+  var lightsaber = document.getElementById("lightsaber");
+  lightsaber.style.webkitTransform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+  lightsaber.style.MozTransform = "rotate("+ tiltLR +"deg)";
+  lightsaber.style.transform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
 }
 
 // Some other fun rotations to try...

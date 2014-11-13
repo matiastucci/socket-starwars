@@ -1,0 +1,150 @@
+<h3 id="1-0-0-beta-13-nightly-691-changes-since-v1-0-0-beta-13-2014-11-11-">1.0.0-beta.13-nightly-691 (changes since v1.0.0-beta.13) (2014-11-11)</h3>
+<h4 id="bug-fixes">Bug Fixes</h4>
+<ul>
+<li><strong>backdrop:</strong> use sass vars (<a href="https://github.com/driftyco/ionic/commit/a56bbc978dff7f3c143b7bb92ec6f031855bb6b5">a56bbc97</a>)</li>
+<li><strong>content:</strong> don&#39;t resize content on keyboard open if it&#39;s inside a modal. (<a href="https://github.com/driftyco/ionic/commit/84f18a1c6e1255e2ab9eff1f7d6fb92bac924391">84f18a1c</a>, closes <a href="https://github.com/driftyco/ionic/issues/2212">#2212</a>)</li>
+<li><strong>ionOptionButton:</strong> vertically align content (<a href="https://github.com/driftyco/ionic/commit/456c2ec71e420b388be49d2a7c84f197c74babb7">456c2ec7</a>, closes <a href="https://github.com/driftyco/ionic/issues/2348">#2348</a>)</li>
+<li><strong>ionicons:</strong> only apply spin to :before, and not the entire element (<a href="https://github.com/driftyco/ionic/commit/76405d7562ada72b3b5109c6f46ddfe110db111a">76405d75</a>, closes <a href="https://github.com/driftyco/ionic/issues/2416">#2416</a>)</li>
+<li><strong>loading:</strong><ul>
+<li>prevent loading service from disabling all future back button behavior. (<a href="https://github.com/driftyco/ionic/commit/34934f636e89a77f61eae96d7cf94b1925fff7b3">34934f63</a>, closes <a href="https://github.com/driftyco/ionic/issues/2214">#2214</a>)</li>
+<li>subsequent calls use config defaults and not last call&#39;s options., #2088 (<a href="https://github.com/driftyco/ionic/commit/cffe631866d093226aa8b8a54122de3d21a23646">cffe6318</a>, closes <a href="https://github.com/driftyco/ionic/issues/2066">#2066</a>)</li>
+</ul>
+</li>
+<li><strong>popover:</strong> reposition popover on window resize. (<a href="https://github.com/driftyco/ionic/commit/1224902e57301f92ee40f3e81425cf89e85c7c89">1224902e</a>, closes <a href="https://github.com/driftyco/ionic/issues/2189">#2189</a>)</li>
+<li><strong>popup:</strong><ul>
+<li>hide buttons div if there&#39;s no buttons to show. (<a href="https://github.com/driftyco/ionic/commit/d3026edffce08b5614777cba086c703775953a2f">d3026edf</a>, closes <a href="https://github.com/driftyco/ionic/issues/2344">#2344</a>)</li>
+<li>prevent back to back popups from dismissing background. (<a href="https://github.com/driftyco/ionic/commit/5658a4df0c2221f867ec3e0f6484f58094d516b4">5658a4df</a>, closes <a href="https://github.com/driftyco/ionic/issues/2071">#2071</a>)</li>
+</ul>
+</li>
+<li><strong>pull to refresh:</strong> minor optimization to prevent flicker on deactivate (<a href="https://github.com/driftyco/ionic/commit/8787760aad446aac633616a02886af6e370ac0e2">8787760a</a>)</li>
+<li><strong>pullToRefresh:</strong> fix animated icon sometimes not showing (<a href="https://github.com/driftyco/ionic/commit/eb265c5823b61de0b58140505cc739fe97f55fb6">eb265c58</a>)</li>
+<li><strong>scroll:</strong> calling ionic scroll methods blur any selected input elements. (<a href="https://github.com/driftyco/ionic/commit/8ee83777f71d41b671695230ce2d1af47760e80a">8ee83777</a>, closes <a href="https://github.com/driftyco/ionic/issues/2244">#2244</a>)</li>
+<li><strong>scrolling:</strong> fix overflow scrolling when side menu and main content both use overflow scrolli (<a href="https://github.com/driftyco/ionic/commit/622667b3dec637bdd75dbf24b2d3e2a4b1142bc9">622667b3</a>)</li>
+<li><strong>sideMenu:</strong> allow expose-aside-when on the right side. (<a href="https://github.com/driftyco/ionic/commit/29d6dc8163fe744f361e2d0e357bfeea43865a16">29d6dc81</a>, closes <a href="https://github.com/driftyco/ionic/issues/2207">#2207</a>)</li>
+<li><strong>slideBox:</strong> do not require scroll parent (<a href="https://github.com/driftyco/ionic/commit/0d2f54e6a9d270daee8380569929d330c06f50e3">0d2f54e6</a>)</li>
+<li><strong>slidebox:</strong> refactor for performance and stability (<a href="https://github.com/driftyco/ionic/commit/7ef9ad74cf6fd12b33e7d48915208ccfbeb5d531">7ef9ad74</a>, closes <a href="https://github.com/driftyco/ionic/issues/2336">#2336</a>, <a href="https://github.com/driftyco/ionic/issues/2317">#2317</a>, <a href="https://github.com/driftyco/ionic/issues/2290">#2290</a>, <a href="https://github.com/driftyco/ionic/issues/2228">#2228</a>, <a href="https://github.com/driftyco/ionic/issues/2067">#2067</a>, <a href="https://github.com/driftyco/ionic/issues/1890">#1890</a>, <a href="https://github.com/driftyco/ionic/issues/1865">#1865</a>, <a href="https://github.com/driftyco/ionic/issues/1850">#1850</a>, <a href="https://github.com/driftyco/ionic/issues/1755">#1755</a>, <a href="https://github.com/driftyco/ionic/issues/1688">#1688</a>, <a href="https://github.com/driftyco/ionic/issues/1578">#1578</a>, <a href="https://github.com/driftyco/ionic/issues/1501">#1501</a>, <a href="https://github.com/driftyco/ionic/issues/1353">#1353</a>, <a href="https://github.com/driftyco/ionic/issues/1342">#1342</a>, <a href="https://github.com/driftyco/ionic/issues/782">#782</a>, <a href="https://github.com/driftyco/ionic/issues/416">#416</a>, <a href="https://github.com/driftyco/ionic/issues/2288">#2288</a>)</li>
+<li><strong>tap:</strong> prevent possible click error in specifc android devices. (<a href="https://github.com/driftyco/ionic/commit/8fae474252c67a447a1d7fc0461b33ea4c733b8b">8fae4742</a>, closes <a href="https://github.com/driftyco/ionic/issues/2235">#2235</a>)</li>
+</ul>
+<h4 id="features">Features</h4>
+<ul>
+<li><strong>fonts:</strong> platform specific fonts (<a href="https://github.com/driftyco/ionic/commit/dfcbef1a03fb9d7a878e4f709e6bb92946342787">dfcbef1a</a>)</li>
+<li><strong>routing:</strong> Helpful logging message on unmatched routes (<a href="https://github.com/driftyco/ionic/commit/ea36d71b7772116bc97f8d73ce493f71af4e53a1">ea36d71b</a>)</li>
+<li><strong>slideBox:</strong> use <code>selected</code> value provided for initial section (<a href="https://github.com/driftyco/ionic/commit/01c829c35114a655e50e98d46e3b03f72364c13f">01c829c3</a>)</li>
+</ul>
+<h4 id="breaking-changes">Breaking Changes</h4>
+<ul>
+<li><p>The slideBox&#39;s API has undergone many changes.</p>
+</li>
+<li><p><strong><code>&lt;ion-slide-box&gt;</code></strong> attributes have changed (see
+<a href="http://ionicframework.com/docs/api/directive/ionSlideBox">documentation</a>):</p>
+<ul>
+<li><p><code>active-slide</code> has changed to <code>selected</code>. Change your code from
+this:</p>
+<pre><code class="lang-html">&lt;ion-slide-box active-slide=&quot;activeSlideIndex&quot;&gt;&lt;/ion-slide-box&gt;
+</code></pre>
+<p>To this:</p>
+<pre><code class="lang-html">&lt;ion-slide-box selected=&quot;activeSlideIndex&quot;&gt;&lt;/ion-slide-box&gt;
+</code></pre>
+</li>
+<li><p><code>does-continue</code> has changed to <code>loop</code>.  Change your code from this:</p>
+<pre><code class="lang-html">&lt;ion-slide-box does-continue=&quot;shouldLoop&quot;&gt;&lt;/ion-slide-box&gt;
+</code></pre>
+<p>To this:</p>
+<pre><code class="lang-html">&lt;ion-slide-box loop=&quot;shouldLoop&quot;&gt;&lt;/ion-slide-box&gt;
+</code></pre>
+</li>
+<li><p><code>auto-play</code> and <code>slide-interval</code> have been merged into <code>auto-play</code>.
+Change your code from this:</p>
+<pre><code class="lang-html">&lt;!-- autoPlay is on --&gt;
+&lt;ion-slide-box auto-play=&quot;true&quot; slide-interval=&quot;1000&quot;&gt;
+&lt;/ion-slide-box&gt;
+&lt;!-- autoPlay is off --&gt;
+&lt;ion-slide-box auto-play=&quot;false&quot; slide-interval=&quot;1000&quot;&gt;
+&lt;/ion-slide-box&gt;
+</code></pre>
+<p>To this:</p>
+<pre><code class="lang-html">&lt;!-- autoPlay is on --&gt;
+&lt;ion-slide-box auto-play=&quot;1000&quot;&gt;&lt;/ion-slide-box&gt;
+&lt;!-- autoPlay is off --&gt;
+&lt;ion-slide-box auto-play=&quot;false&quot;&gt;&lt;/ion-slide-box&gt;
+</code></pre>
+</li>
+<li><p><code>show-pager</code> and <code>pager-click</code> have been removed. Use
+a child <code>&lt;ion-slide-pager&gt;</code> element. See the <a href="http://ionicframework.com/docs/api/directive/ionSlidePager"><code>ion-slide-pager</code>
+documentation</a>.
+Change your code from this:</p>
+</li>
+</ul>
+<pre><code class="lang-html">&lt;!-- pager using default click action --&gt;
+&lt;ion-slide-box show-pager=&quot;true&quot;&gt;
+&lt;/ion-slide-box&gt;
+&lt;!-- pager with custom click action --&gt;
+&lt;ion-slide-box show-pager=&quot;true&quot; pager-click=&quot;doSomething(index)&quot;&gt;
+&lt;/ion-slide-box&gt;
+</code></pre>
+<p>To this:</p>
+<pre><code class="lang-html">&lt;ion-slide-box&gt;
+  &lt;!-- pager using default click action --&gt;
+  &lt;ion-slide-pager&gt;&lt;/ion-slide-pager&gt;
+&lt;/ion-slide-box&gt;
+&lt;ion-slide-box&gt;
+  &lt;!-- pager with custom click action --&gt;
+  &lt;ion-slide-pager ng-click=&quot;doSomething(index)&quot;&gt;&lt;/ion-slide-pager&gt;
+&lt;/ion-slide-box&gt;
+</code></pre>
+</li>
+<li><p><strong><code>$ionicSlideBoxDelegate</code></strong> methods have changed (see
+<a href="http://ionicframework.com/docs/api/service/$ionicSlideBoxDelegate">documentation</a>):</p>
+<ul>
+<li><p><code>update()</code> has been removed. slideBox updates on its own now.</p>
+</li>
+<li><p><code>stop()</code> has been removed. See <code>autoPlay()</code> below.</p>
+</li>
+<li><p><code>start()</code> hass been removed. See <code>autoPlay()</code> below.</p>
+</li>
+<li><p><code>slide(newIndex[, speed])</code> has been renamed to `select(newIndex[,
+speed]);</p>
+</li>
+<li><p><code>currentIndex()</code> has been renamed to <code>selected()</code>.</p>
+</li>
+<li><p><code>slidesCount()</code> has been renamed to <code>count()</code>.</p>
+</li>
+<li><p>New method <code>$ionicSlideBoxDelegate.autoPlay()</code>. Change your code
+from this:</p>
+<pre><code class="lang-js">// stop auto sliding
+$ionicSlideBoxDelegate.stop();
+// later... start auto sliding
+$ionicSlideBoxDelegate.start();
+</code></pre>
+<p>To this:</p>
+<pre><code class="lang-js">var autoPlaySpeed = 3000; //wait 3000 seconds between changing slide
+// stop auto sliding
+$ionicSlideBoxDelegate.autoPlay(false);
+// later... start auto sliding
+$ionicSlideBoxDelegate.autoPlay(autoPlaySpeed);
+</code></pre>
+</li>
+<li><p><code>previous()</code> now returns the index of the previous slide and does
+not select. Change your code from this:</p>
+<pre><code class="lang-js">// select previous slide
+$ionicSlideBoxDelegate.previous();
+</code></pre>
+<p>To this:</p>
+<pre><code class="lang-js">// select previous slide
+$ionicSlideBoxDelegate.select( $ionicSlideBoxDelegate.previous() );
+</code></pre>
+</li>
+<li><p><code>next()</code> now returns the index of the next slide and does
+not select. Change your code from this:</p>
+<pre><code class="lang-js">// select next slide
+$ionicSlideBoxDelegate.next();
+</code></pre>
+<p>To this:</p>
+<pre><code class="lang-js">// select next slide
+$ionicSlideBoxDelegate.select( $ionicSlideBoxDelegate.next() );
+</code></pre>
+</li>
+</ul>
+<p>(<a href="https://github.com/driftyco/ionic/commit/7ef9ad74cf6fd12b33e7d48915208ccfbeb5d531">7ef9ad74</a>)</p>
+</li>
+</ul>
