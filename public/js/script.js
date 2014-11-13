@@ -1,16 +1,22 @@
-var socket = io.connect();
+var socket = io.connect('http://localhost:8080');
 var tiltLR,tiltFB,dir,lightsaberType;
 
-var code = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-socket.emit('join',{code: code});
-
-$('.code').html(code);
+Reveal.addEventListener('sync', function() {
+  if(!code){
+    var code = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    $('.code').html(code);
+    socket.emit('join',{code: code});
+  }
+  if(lightsaberType){
+    $('.slides').css('zoom','1');
+  }
+}, false );
 
 function compileNewLightsaber(type){
   var template = $('#template').html();
   Mustache.parse(template);
   var rendered = Mustache.render(template, {type: type});
-  $('#lightsaber').html(rendered);
+  $('.lightsaber').html(rendered);
 }
 
 function deviceOrientationHandler(tiltLR, tiltFB, dir) {
@@ -29,9 +35,11 @@ function toggleSaber(){
 }
 
 socket.on('lightsaber type', function(type){
-  $('.code-box').hide();
+  $('.sync-text').hide();
+  $('.controls').remove();
   lightsaberType = type;
   compileNewLightsaber(type);
+  $('.slides').css('zoom','1');
 });
 
 socket.on('tiltLR', function(data){

@@ -13,7 +13,7 @@ io.on('connection', function (socket) {
 
   socket.on('join', function (data) {
     code = data.code;
-    socket.join(code); // We are using room of socket io
+    socket.join(code);
   });
 
   socket.on('lightsaber type', function (type) {

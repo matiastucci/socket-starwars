@@ -2,13 +2,6 @@ body {
   background: black url("../img/background.png");
 }
 
-.lightsaber {
-  -webkit-perspective: 300; perspective: 300;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}
-
 .box {
   width:16px;
   height:310px;
@@ -19,17 +12,13 @@ body {
   left:50%;
 }
 
-.code-box{
-  color: #fff;
-  text-align: center;
-  z-index: 99;
-  font-size: 20px;
-}
-
-.url{
-  text-decoration: underline;
-}
-
 .code{
-  font-weight: bold;
+  font-weight: bold !important;
+}
+
+.lightsaber {
+  -webkit-perspective: 300; perspective: 300;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
