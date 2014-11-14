@@ -1,7 +1,7 @@
 angular.module('lightsabers.services', [])
 
 .factory('mySocket', function (socketFactory) {
-  var baseUrl = 'https://socket-transform.herokuapp.com:443';
+  var baseUrl = 'https://socket-starwars.herokuapp.com:443';
   // var baseUrl = 'http://10.208.32.147:8080';
 
   var myIoSocket = io.connect(baseUrl);
