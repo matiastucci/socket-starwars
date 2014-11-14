@@ -1,7 +1,7 @@
 var socket = io.connect();
 
-var baseUrl = 'https://socket-starwars.herokuapp.com:443/mobile/#/tab/config/';
-// var baseUrl = 'http://10.208.32.147:8080/mobile/#/tab/config/';
+// var baseUrl = 'https://socket-starwars.herokuapp.com:443/mobile/#/tab/config/';
+var baseUrl = 'http://10.208.32.147:8080/mobile/#/tab/config/';
 
 var tiltLR,tiltFB,dir,lightsaberType,code;
 
@@ -69,4 +69,9 @@ socket.on('toggle lightsaber', function(){
     document.getElementById('audio').play()
   }
   document.getElementById(lightsaberType).checked = !checked;
+});
+
+socket.on('mobile disconnect', function(){
+  $('.sync-text').show();
+  $('.lightsaber').empty();
 });

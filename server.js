@@ -33,6 +33,10 @@ io.on('connection', function (socket) {
     socket.in(code).emit('toggle lightsaber');
   });
 
+  socket.on('disconnect', function () {
+    socket.in(code).emit('mobile disconnect');
+  });
+
 });
 
 server.listen(port, function(){
