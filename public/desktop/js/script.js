@@ -1,7 +1,7 @@
 var socket = io.connect();
 
-// var baseUrl = 'https://socket-starwars.herokuapp.com:443/mobile/#/tab/config/';
-var baseUrl = 'http://10.208.32.147:8080/mobile/#/tab/config/';
+var baseUrl = 'https://socket-starwars.herokuapp.com:443/mobile/#/tab/config/';
+// var baseUrl = 'http://10.208.32.147:8080/mobile/#/tab/config/';
 
 var tiltLR,tiltFB,dir,lightsaberType,code;
 
