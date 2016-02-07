@@ -29,3 +29,5 @@ Then, point your browser to `http://localhost:8080`
 
 * [Ionic](http://ionicframework.com)
 * [angular-socket-io](https://github.com/btford/angular-socket-io)
+
+Cool project! 
